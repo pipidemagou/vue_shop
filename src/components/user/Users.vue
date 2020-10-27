@@ -422,7 +422,8 @@ export default {
     // 点击按钮分配角色
     async saveRoleInfo () {
       if (!this.selectedRoleId) {
-        this.$message.error({
+        this.setRoleDialogVisible = false
+        return this.$message.error({
           message: '请选择要分配的角色！',
           center: true
         })
